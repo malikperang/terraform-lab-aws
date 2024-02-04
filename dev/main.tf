@@ -12,10 +12,12 @@ terraform {
 # Configure AWS VPC disini
 resource "aws_vpc" "main" {
   cidr_block = "192.168.1.0/24"
-  tags ={
-    Name = var.tag_name
-    Project = var.tag_project
-  }
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${local.resource_prefix}.vpc"
+    }
+  )
 }
 
 # Configure Subnet untuk VPC disini

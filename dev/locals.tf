@@ -7,6 +7,7 @@ locals {
     "us-west-2"      = "uswe2"
     "eu-west-1"      = "euwe1"
     "ap-southeast-1" = "apse1"
+    "ap-southeast-2" = "apse2"
     # Add more regions as needed
   }
 
