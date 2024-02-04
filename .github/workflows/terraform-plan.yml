@@ -1,10 +1,10 @@
 on:
-    push:
-        branches:
-            - dev
-        paths:
-            - 'dev/**'
-            - '!dev/*.md'
+  push:
+    branches:
+        - dev
+    paths:
+        - 'dev/**'
+        - '!dev/*.md'
   
 env:
     TF_CLOUD_ORGANIZATION: "DcodeDigital"
