@@ -19,3 +19,9 @@ variable "tag_project" {
     type        = string
     default     = "devops-showcase-jan2024"
 }
+
+variable "TFE_WORKSPACE_NAME" {
+  description = "The name of the Terraform Cloud workspace"
+  type        = string
+  default     = "terraform-lab-aws-ga"
+}
