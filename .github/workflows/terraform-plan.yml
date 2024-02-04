@@ -34,11 +34,5 @@ jobs:
           uses: hashicorp/tfc-workflows-github/actions/create-run@v1.0.0
           with:
             workspace: ${{ env.TF_WORKSPACE }}
-            directory: ${{ env.CONFIG_DIRECTORY }}
-            comment: "Terraform Plan"
-            speculative: true
-            tf_api_token: ${{ env.TF_API_TOKEN }}
-            tf_cloud_organization: ${{ env.TF_CLOUD_ORGANIZATION }}
-            tf_input: ${{ env.TF_INPUT }}
-            tf_in_automation: ${{ env.TF_IN_AUTOMATION }}
+            configuration_version: ${{ steps.plan-upload.outputs.configuration_version_id }}
             plan_only: true
